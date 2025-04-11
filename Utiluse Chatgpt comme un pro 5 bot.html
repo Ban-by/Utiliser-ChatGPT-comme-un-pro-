@@ -1,0 +1,206 @@
+< !DOCTYPE html>
+<html lang= »fr »>
+<head>
+  <meta charset= »UTF-8 »>
+  <title>Utilise ChatGPT comme un Pro</title>
+  <style>
+    Body {
+      Font-family : Arial, sans-serif ;
+      Background : linear-gradient(to bottom, #eaf4fc, #d1e8ff) ;
+      Margin : 0 ;
+      Padding : 0 ;
+    }
+
+    Header {
+      Background-color : #0077cc ;
+      Color : white ;
+      Padding : 20px ;
+      Text-align : center ;
+    }
+
+    .container {
+      Padding : 30px ;
+      Max-width : 800px ;
+      Margin : auto ;
+    }
+
+    H2 {
+      Color : #0077cc ;
+    }
+
+    Form input, form textarea {
+      Display : block ;
+      Width : 100% ;
+      Margin-bottom : 10px ;
+      Padding : 10px ;
+      Border-radius : 5px ;
+      Border : 1px solid #ccc ;
+    }
+
+    .cta {
+      Background-color : #0077cc ;
+      Color : white ;
+      Padding : 12px 25px ;
+      Border : none ;
+      Cursor : pointer ;
+      Border-radius : 5px ;
+      Font-size : 16px ;
+      Margin-top : 15px ;
+    }
+
+    .chat-container {
+      Background : white ;
+      Border-radius : 10px ;
+      Padding : 15px ;
+      Margin-top : 40px ;
+      Box-shadow : 0 0 8px rgba(0,0,0,0.1) ;
+    }
+
+    .messages {
+      Height : 300px ;
+      Overflow-y : auto ;
+      Border : 1px solid #ccc ;
+      Padding : 10px ;
+      Margin-bottom : 10px ;
+      Background : #f9f9f9 ;
+    }
+
+    .message {
+      Margin : 5px 0 ;
+    }
+
+    .bot {
+      Color : green ;
+    }
+
+    .user {
+      Color : blue ;
+      Text-align : right ;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Utilise ChatGPT comme un Pro</h1>
+    <p>Maîtrise la puissance de ChatGPT dans tous les domaines. Prix : 15.000 FCFA</p>
+  </header>
+
+  <div class= »container »>
+    <h2>Inscris-toi maintenant</h2>
+    <form action= »https://wa.me/tonnumeroici » target= »_blank »>
+      <input type= »text » placeholder= »Nom et prénom » required>
+      <input type= »text » placeholder= »Pays de résidence » required>
+      <input type= »number » placeholder= »Âge » required>
+      <input type= »email » placeholder= »Adresse email » required>
+      <input type= »tel » placeholder= »Numéro de téléphone » required>
+      <textarea placeholder= »Quelle est ta motivation pour suivre cette formation ? » required></textarea>
+      <button class= »cta » type= »submit »>S’inscrire via WhatsApp</button>
+    </form>
+
+    <h2>Ce que tu vas apprendre :</h2>
+    <ol>
+      <li>Rédiger des documents juridiques</li>
+      <li>Traduire instantanément des textes</li>
+      <li>Générer des idées de contenu</li>
+      <li>Écrire des scripts pour TikTok, YouTube, Reels…</li>
+      <li>Créer des visuels, logos, affiches</li>
+      <li>Résumer des livres ou vidéos</li>
+      <li>Écrire des emails professionnels</li>
+      <li>Corriger et améliorer des textes</li>
+      <li>Trouver des idées de business</li>
+      <li>Créer un plan de cours complet</li>
+      <li>Faire un CV ou une lettre de motivation</li>
+      <li>Répondre aux messages clients</li>
+      <li>Automatiser des tâches</li>
+      <li>Coder des sites ou bots</li>
+      <li>Rédiger des fiches produits e-commerce</li>
+      <li>Simuler un entretien d’embauche</li>
+      <li>Planifier ton contenu du mois</li>
+      <li>T’aider à faire tes devoirs</li>
+      <li>Générer des idées cadeaux ou voyages</li>
+      <li>Créer une stratégie marketing</li>
+    </ol>
+
+    <h3 style= »color :#0077cc ; »>Rejoins-nous aujourd’hui. Accès à vie + bonus offerts !</h3>
+
+    <div class= »chat-container »>
+      <h2>Chatbot d’aide à l’inscription</h2>
+      <div class= »messages » id= »messages »></div>
+      <input type= »text » id= »userInput » placeholder= »Écris ici… »>
+      <button onclick= »sendMessage() »>Envoyer</button>
+    </div>
+  </div>
+
+  <script>
+    Const messages = document.getElementById(« messages ») ;
+
+    Function botReply(text) {
+      Messages.innerHTML += `<div class= »message bot »>${text}</div>` ;
+      Messages.scrollTop = messages.scrollHeight ;
+    }
+
+    Function userReply(text) {
+      Messages.innerHTML += `<div class= »message user »>${text}</div>` ;
+      Messages.scrollTop = messages.scrollHeight ;
+    }
+
+    Function sendMessage() {
+      Const input = document.getElementById(« userInput ») ;
+      Const userText = input.value.trim() ;
+
+      If (userText === « « ) return ;
+
+      userReply(userText) ;
+      input.value = « « ;
+
+      const lower = userText.toLowerCase() ;
+
+      if (lower === « a ») {
+        botReply(`
+          > La formation contient 20 modules + 4 BONUS :<br><br>
+          - Rédaction avec l’IA<br>
+          - Création de business<br>
+          - Automatisations<br>
+          - Gagner de l’argent avec ChatGPT<br><br>
+          Souhaites-tu t’inscrire maintenant ? (Oui / Non)
+        `) ;
+      } else if (lower === « b ») {
+        botReply(`
+	Tu peux payer via :<br><br>
+          Orange Money / Moov / Wave : [numéro]<br>
+          PayPal : [lien]<br>
+          Stripe : [lien]<br><br>
+          Après paiement, envoie une capture ici pour recevoir ton lien de formation.
+        `) ;
+      } else if (lower === « c ») {
+        botReply(« > Un humain va bientôt te répondre. Merci de patienter. ») ;
+      } else if (lower === « oui ») {
+        botReply(« > Super ! Clique sur le bouton d’inscription pour finaliser ! ») ;
+      } else if (lower === « non ») {
+        botReply(« > Pas de souci, tu peux revenir quand tu veux ! ») ;
+      } else if (lower.includes(« merci »)) {
+        botReply(« > Merci à toi aussi et bonne formation ! ») ;
+      } else {
+        botReply(« > Je ne comprends pas encore cette commande. Choisis A, B ou C. ») ;
+      }
+    }
+
+    Window.onload = () => {
+      botReply(`
+	Bonjour et bienvenue !<br>
+        Tu veux apprendre à utiliser ChatGPT comme un pro ?<br><br>
+        Voici tout ce que tu dois savoir :<br><br>
+        1. Formation 100% en ligne<br>
+        2. Accès à vie<br>
+        3. Prix : 15.000 FCFA seulement<br>
+        4. Bonus inclus !<br><br>
+        Souhaites-tu :<br>
+        A – Voir le programme<br>
+        B – Payer maintenant<br>
+        C – Parler à un humain
+      `) ;
+    } ;
+  </script>
+</body>
+</html>
+
