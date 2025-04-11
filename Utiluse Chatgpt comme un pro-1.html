@@ -1,0 +1,217 @@
+< !DOCTYPE html>
+
+
+
+<html lang= »fr »>
+<head>
+    <meta charset= »UTF-8 »>
+    <meta name= »viewport » content= »width=device-width, initial-scale=1.0 »>
+    <title>Utilise ChatGPT comme un Pro</title>
+
+    <link rel= »icon » href= »https://cdn-icons-png.flaticon.com/512/4712/4712109.png » type= »image/png »>
+
+    
+    <script src= »https://kit.fontawesome.com/a076d05399.js » crossorigin= »anonymous »></script>
+
+    <style>
+        Body {
+            Font-family : ‘Segoe UI’, sans-serif ;
+            Background : linear-gradient(to right, #007acc, #25D366) ;
+            Margin : 0 ;
+            Padding : 0 ;
+            Display : flex ;
+            Flex-direction : column ;
+            Align-items : center ;
+            Justify-content : center ;
+            Min-height : 100vh ;
+            Color : white ;
+        }
+
+        H1 {
+            Margin-top : 40px ;
+            Font-size : 32px ;
+            Animation : fadeIn 1.2s ease-in-out ;
+        }
+
+        p.description {
+            font-size : 18px ;
+            max-width : 600px ;
+            text-align : center ;
+            margin : 20px 20px 40px ;
+            animation : fadeIn 1.5s ease-in-out ;
+        }
+
+        Form {
+            Background : white ;
+            Color : black ;
+            Padding : 25px ;
+            Border-radius : 15px ;
+            Box-shadow : 0 5px 15px rgba(0,0,0,0.2) ;
+            Width : 90% ;
+            Max-width : 400px ;
+            Animation : fadeInUp 1.5s ease-in-out ;
+        }
+
+        Input {
+            Width : 100% ;
+            Padding : 12px ;
+            Margin : 10px 0 ;
+            Border : 1px solid #ccc ;
+            Border-radius : 8px ;
+            Font-size : 16px ;
+        }
+
+        Button {
+            Background-color : #25D366 ;
+            Color : white ;
+            Border : none ;
+            Padding : 12px 20px ;
+            Font-size : 16px ;
+            Border-radius : 8px ;
+            Cursor : pointer ;
+            Transition : background 0.3s ;
+            Display : flex ;
+            Align-items : center ;
+            Justify-content : center ;
+        }
+
+        Button i {
+            Margin-right : 8px ;
+        }
+
+        Button :hover {
+            Background-color : #1ebe5d ;
+        }
+
+        @keyframes fadeIn {
+            From { opacity : 0 ; }
+            To { opacity : 1 ; }
+        }
+
+        @keyframes fadeInUp {
+            From { opacity : 0 ; transform : translateY(30px) ; }
+            To { opacity : 1 ; transform : translateY(0) ; }
+        }
+    </style>
+</head>
+<body>
+
+    <h1><i class= »fas fa-robot »></i> Utilise ChatGPT comme un Pro</h1>
+
+    <p class= »description »>
+        Découvre comment exploiter le plein potentiel de l’intelligence artificielle pour ton business, tes études ou ta vie perso. Remplis le formulaire ci-dessous et rejoins-nous sur WhatsApp !
+    </p>
+
+    <form id= »inscriptionForm »>
+        <input type= »text » id= »nom » placeholder= »Nom » required>
+        <input type= »text » id= »prenom » placeholder= »Prénom » required>
+        <input type= »text » id= »pays » placeholder= »Pays de résidence » required>
+        <input type= »number » id= »age » placeholder= »Âge » required>
+        <button type= »submit »><i class= »fab fa-whatsapp »></i> S’inscrire sur WhatsApp</button>
+    </form>
+
+    <script>
+        Document.getElementById(‘inscriptionForm’).addEventListener(‘submit’, function€ {
+            e.preventDefault() ;
+
+            const nom = document.getElementById(‘nom’).value ;
+            const prenom = document.getElementById(‘prenom’).value ;
+            const pays = document.getElementById(‘pays’).value ;
+            const age = document.getElementById(‘age’).value ;
+
+            const message = `Bonjour, je m’inscris au programme « Utilise ChatGPT comme un Pro ».
+Nom : ${nom}
+Prénom : ${prenom}
+Pays : ${pays}
+Âge : ${age}` ;
+
+            Const numeroWhatsApp = « 22382794955 » ; // Remplace ce numéro par le tien
+            Const lien = `https://wa.me/${numeroWhatsApp} ?text=${encodeURIComponent(message)}` ;
+
+            Window.open(lien, ‘_blank’) ;
+        }) ;
+    </script>
+	<h3 style= »color :#0077cc ; »>Rejoins-nous aujourd’hui. Accès à vie + bonus offerts !</h3>
+
+    <div class= »chat-container »>
+      <h2>Chatbot d’aide à l’inscription</h2>
+      <div class= »messages » id= »messages »></div>
+      <input type= »text » id= »userInput » placeholder= »Écris ici… »>
+      <button onclick= »sendMessage() »>Envoyer</button>
+    </div>
+  </div>
+
+  <script>
+    Const messages = document.getElementById(« messages ») ;
+
+    Function botReply(text) {
+      Messages.innerHTML += `<div class= »message bot »>${text}</div>` ;
+      Messages.scrollTop = messages.scrollHeight ;
+    }
+
+    Function userReply(text) {
+      Messages.innerHTML += `<div class= »message user »>${text}</div>` ;
+      Messages.scrollTop = messages.scrollHeight ;
+    }
+
+    Function sendMessage() {
+      Const input = document.getElementById(« userInput ») ;
+      Const userText = input.value.trim() ;
+
+      If (userText === « « ) return ;
+
+      userReply(userText) ;
+      input.value = « « ;
+
+      const lower = userText.toLowerCase() ;
+
+      if (lower === « a ») {
+        botReply(`
+          > La formation contient 20 modules + 4 BONUS :<br><br>
+          - Rédaction avec l’IA<br>
+          - Création de business<br>
+          - Automatisations<br>
+          - Gagner de l’argent avec ChatGPT<br><br>
+          Souhaites-tu t’inscrire maintenant ? (Oui / Non)
+        `) ;
+      } else if (lower === « b ») {
+        botReply(`
+	Tu peux payer via :<br><br>
+          Orange Money / Moov / Wave : [numéro]<br>
+          PayPal : [lien]<br>
+          Stripe : [lien]<br><br>
+          Après paiement, envoie une capture ici pour recevoir ton lien de formation.
+        `) ;
+      } else if (lower === « c ») {
+        botReply(« > Un humain va bientôt te répondre. Merci de patienter. ») ;
+      } else if (lower === « oui ») {
+        botReply(« > Super ! Clique sur le bouton d’inscription pour finaliser ! ») ;
+      } else if (lower === « non ») {
+        botReply(« > Pas de souci, tu peux revenir quand tu veux ! ») ;
+      } else if (lower.includes(« merci »)) {
+        botReply(« > Merci à toi aussi et bonne formation ! ») ;
+      } else {
+        botReply(« > Je ne comprends pas encore cette commande. Choisis A, B ou C. ») ;
+      }
+    }
+
+    Window.onload = () => {
+      botReply(`
+	Bonjour et bienvenue !<br>
+        Tu veux apprendre à utiliser ChatGPT comme un pro ?<br><br>
+        Voici tout ce que tu dois savoir :<br><br>
+        1. Formation 100% en ligne<br>
+        2. Accès à vie<br>
+        3. Prix : 15.000 FCFA seulement<br>
+        4. Bonus inclus !<br><br>
+        Souhaites-tu :<br>
+        A – Voir le programme<br>
+        B – Payer maintenant<br>
+        C – Parler à un humain
+      `) ;
+    } ;
+  </script>
+
+</body>
+</html>
+
